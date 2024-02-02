@@ -57,6 +57,9 @@ module.exports = {
         textColor: {
           DEFAULT: "#242f65",
         },
+        cardColor: {
+          DEFAULT: "#f3f0f0",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
