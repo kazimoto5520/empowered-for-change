@@ -31,7 +31,7 @@ const OurCoreValue = () => {
   ];
 
   return (
-    <div className="mt-16">
+    <div className="mt-16" id="">
       <div className="flex flex-col">
         {/* Heading :: Our Core Value */}
         <div className="flex flex-col items-center justify-center text-textColor">
@@ -59,7 +59,7 @@ const OurCoreValue = () => {
                 <div className="mt-6 text-textColor">
                   <h1 className="font-bold text-xl mb-2">{card.title}</h1>
                   <p className="text-sm">{card.description}</p>
-                  <Link href="#" className="text-mainColor mt-2">
+                  <Link href="#" className="text-mainColor text-sm mt-2">
                     Learn more...
                   </Link>
                 </div>

@@ -21,28 +21,28 @@ const NavIcons = () => {
   const navLinks = [
     {
       name: "Home",
-      href: "/",
+      href: "#top",
     },
     {
       name: "About Us",
-      href: "/",
+      href: "#about",
     },
     {
       name: "Events",
-      href: "/",
+      href: "#events",
     },
     {
       name: "Blog",
-      href: "/",
+      href: "#blog",
     },
     {
       name: "Contact",
-      href: "/",
+      href: "#contact",
     },
   ];
 
   return (
-    <div className="px-4 py-2 text-mainColor">
+    <div className="px-4 py-2 text-mainColor mx-32">
       <div className="flex flex-col">
         <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
           {/* Company Email and Location */}
