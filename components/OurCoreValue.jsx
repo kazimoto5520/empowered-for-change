@@ -70,7 +70,7 @@ const OurCoreValue = () => {
 
         <center>
           <div className="mt-16">
-            <Button className="bg-mainColor text-white rounded-xl hover:bg-textColor hover:duration-300">
+            <Button className="bg-mainColor text-white rounded-xl shadow-md hover:bg-textColor hover:duration-300">
               View All Services
             </Button>
           </div>

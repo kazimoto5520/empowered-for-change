@@ -108,7 +108,7 @@ const ValuesAndVision = () => {
                   </div>
                 </div>
                 <div>
-                  <Button className="bg-mainColor text-white rounded-xl hover:bg-textColor hover:duration-300">
+                  <Button className="bg-mainColor text-white rounded-xl shadow-md hover:bg-textColor hover:duration-300">
                     More About Us
                   </Button>
                 </div>

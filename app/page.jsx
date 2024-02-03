@@ -1,4 +1,5 @@
 import HeroSection from "@/components/HeroSection";
+import LatestBlogs from "@/components/LatestBlogs";
 import OurCoreValue from "@/components/OurCoreValue";
 import ValuesAndVision from "@/components/ValuesAndVision";
 import Image from "next/image";
@@ -10,6 +11,7 @@ export default function Home() {
         <HeroSection />
         <ValuesAndVision />
         <OurCoreValue />
+        <LatestBlogs />
       </div>
     </div>
   );
