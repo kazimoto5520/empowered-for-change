@@ -46,7 +46,7 @@ const LatestBlogs = () => {
     ]
 
     return (
-        <div className="mt-16" id="blog">
+        <div className="mt-16 mx-32" id="blog">
             <div className="flex flex-col">
                 {/* Heading :: Latest Blogs & Insights */}
                 <div className="flex justify-between items-center">
@@ -78,7 +78,7 @@ const LatestBlogs = () => {
                         <CarouselContent className="">
                             {blogs.map(blog => (
                                 <CarouselItem key={blog.title} className="md:basis-1/2 lg:basis-1/3 pl-4">
-                                    <div className="border border-gray-300 shadow-lg rounded-2xl">
+                                    <div className="border border-gray-300 shadow-lg rounded-2xl hover:cursor-grabbing">
                                         <div className="flex flex-col">
                                             <div className="aspect-w-16 aspect-h-9">
                                             <Image

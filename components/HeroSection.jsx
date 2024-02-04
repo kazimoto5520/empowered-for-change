@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="flex justify-between items-center">
+    <div className="flex justify-between items-center mx-32">
       <div className="flex flex-col gap-y-4">
         {/* Heading */}
         <div>

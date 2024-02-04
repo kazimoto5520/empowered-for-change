@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 
 const ValuesAndVision = () => {
   return (
-    <div className="mt-16">
+    <div className="mt-16 mx-32">
       {/* Image */}
       <div className="flex justify-between items-center">
         <div className="" style={{ width: "500px", height: "500px" }}>

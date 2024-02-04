@@ -31,7 +31,7 @@ const OurCoreValue = () => {
   ];
 
   return (
-    <div className="mt-16" id="">
+    <div className="mt-16 mx-32" id="">
       <div className="flex flex-col">
         {/* Heading :: Our Core Value */}
         <div className="flex flex-col items-center justify-center text-textColor">

@@ -7,7 +7,7 @@ import {
     FaFacebook, FaInstagram,
     FaLinkedin, FaLocationArrow,
     FaLocationDot,
-    FaPhone,
+    FaPhone, FaTelegram,
     FaXTwitter,
     FaYoutube
 } from "react-icons/fa6";
@@ -15,6 +15,7 @@ import Link from "next/link";
 import {Input} from "@/components/ui/input";
 import {Button} from "@/components/ui/button";
 import {Separator} from "@/components/ui/separator";
+import {FaTelegramPlane} from "react-icons/fa";
 
 const Footer = () => {
     const images = [
@@ -111,30 +112,30 @@ const Footer = () => {
 
                             <div className="flex items-center my-2 space-x-4">
                                 <div className="text-center bg-mainColor p-2 rounded-full">
-                                    <Link href="/">
+                                    <Link href="https://twitter.com/mdk_tz" target="_blank" rel="noopener noreferrer">
                                         <FaXTwitter size={16} className="text-white"/>
                                     </Link>
                                 </div>
 
                                 <div className="text-center bg-mainColor p-2 rounded-full">
-                                    <Link href="/">
+                                    <Link href="/" target="_blank" rel="noopener noreferrer">
                                         <FaFacebook size={16} className="text-white shadow-md rounded-full"/>
                                     </Link>
                                 </div>
 
                                 <div className="text-center bg-mainColor p-2 rounded-full">
-                                    <Link href="/">
+                                    <Link href="/" target="_blank" rel="noopener noreferrer">
                                         <FaYoutube size={16} className="text-white shadow-md rounded-full"/>
                                     </Link>
                                 </div>
 
                                 <div className="text-center bg-mainColor p-2 rounded-full">
-                                    <Link href="/">
+                                    <Link href="/" target="_blank" rel="noopener noreferrer">
                                         <FaLinkedin size={16} className="text-white shadow-md rounded-full"/>
                                     </Link>
                                 </div>
                                 <div className="text-center bg-mainColor p-2 rounded-full">
-                                    <Link href="/">
+                                    <Link href="/" target="_blank" rel="noopener noreferrer">
                                         <FaInstagram size={16} className="text-white shadow-md rounded-full"/>
                                     </Link>
                                 </div>
@@ -150,10 +151,10 @@ const Footer = () => {
                                 <h1 className="text-sm text-textColor mb-2">Subscribe our Newsletter</h1>
                                 <div className="relative flex w-full max-w-sm items-center">
                                     <Input type="email" placeholder="Email"
-                                           className="rounded-full border-none pr-12"/>
+                                           className="rounded-full border-none pr-12 focus-visible:outline-none focus-visible:ring-mainColor outline-none border-gray-300"/>
                                     <Button type="submit"
-                                            className="absolute top-0 right-0 bg-mainColor text-white rounded-r-full h-full shadow-md hover:bg-textColor hover:duration-300">
-                                        <FaLocationArrow size={20}/>
+                                            className="absolute top-0 right-0 bg-mainColor text-white text-center rounded-r-full h-full shadow-md hover:bg-textColor hover:duration-300">
+                                        <FaTelegramPlane size={20}/>
                                     </Button>
                                 </div>
 

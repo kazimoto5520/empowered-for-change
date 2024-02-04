@@ -42,7 +42,7 @@ const OurTeam = () => {
     ]
 
     return (
-        <div className="mt-16" id="contact">
+        <div className="mt-16 mx-32" id="contact">
             <div className="flex flex-col">
                 {/* Heading :: Latest Blogs & Insights */}
                 <div className="flex justify-between items-center">

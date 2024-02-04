@@ -83,6 +83,7 @@ const NavIcons = () => {
           <div className="mt-4 p-1 duration-300">
             <Input
               type="text"
+              placeholder="Search"
               className="focus-visible:outline-none focus-visible:ring-mainColor outline-none border-gray-300 rounded-md p-2"
             />
           </div>
