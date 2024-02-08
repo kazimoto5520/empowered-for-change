@@ -8,7 +8,6 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-    CarouselApi
 } from "./ui/carousel";
 import Image from "next/image";
 import {FaCalendar} from "react-icons/fa6";
@@ -16,7 +15,7 @@ import Link from "next/link";
 
 const LatestBlogs = () => {
 
-    const [api, setApi] = React.useState(CarouselApi);
+    const [api, setApi] = React.useState();
     const [current, setCurrent] = React.useState(0)
     const [count, setCount] = React.useState(0)
 

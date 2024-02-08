@@ -48,7 +48,7 @@ const Footer = () => {
                     <div
                         className="grid grid-cols-4 mx-20 p-4 max-sm:mx-4 max-lg:mx-8">
                         {images.map(img => (
-                            <Image src={img.source} width={200} height={200} alt={img.alt}
+                            <Image key={img.alt} src={img.source} width={200} height={200} alt={img.alt}
                                    className="rounded-full object-cover"/>))}
                     </div>
                 </div>
