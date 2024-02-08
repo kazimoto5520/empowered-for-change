@@ -14,7 +14,7 @@ export default function RootLayout({children}) {
     return (
         <html lang="en">
         <body className={inter.className}>
-        <div className="flex flex-col mt-4">
+        <div className="flex flex-col">
             <NavIcons/>
             {children}
             <Footer/>

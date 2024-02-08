@@ -16,24 +16,24 @@ const OurTeam = () => {
             phone: "#"
         },
         {
-            name: "Kwayu Mmari",
-            position: "Head Director",
+            name: "Meshack Kazimoto",
+            position: "Developer",
             image: "/women.png",
             facebook: "/",
             twitter: "/",
             phone: "#"
         },
         {
-            name: "Kwayu Mmari",
-            position: "Head Director",
+            name: "Kazimoto",
+            position: "Co Founder",
             image: "/women.png",
             facebook: "/",
             twitter: "/",
             phone: "#"
         },
         {
-            name: "Kwayu Mmari",
-            position: "Head Director",
+            name: "Danny",
+            position: "Assistant",
             image: "/women.png",
             facebook: "/",
             twitter: "/",
@@ -42,11 +42,11 @@ const OurTeam = () => {
     ]
 
     return (
-        <div className="mt-16 mx-32" id="contact">
+        <div className="mt-16 mx-32 max-sm:mx-4 max-lg:mx-8" id="contact">
             <div className="flex flex-col">
                 {/* Heading :: Latest Blogs & Insights */}
                 <div className="flex justify-between items-center">
-                    <h1 className="text-textColor font-bold text-4xl">
+                    <h1 className="text-textColor font-bold text-4xl max-sm:text-3xl max-sm:p-1">
                         Meet Our Trusted Expertise
                     </h1>
                     <Button
@@ -67,7 +67,7 @@ const OurTeam = () => {
 
                 {/* Carousel */}
                 <div className="mt-16 w-full text-textColor">
-                    <div className="grid grid-cols-4 gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <div className="grid grid-cols-4 gap-4 max-sm:grid-cols-2 max-lg:lg:grid-cols-2">
                         {members.map(member => (
                             <div key={member.name} className="">
                                 <div className="border border-gray-300 shadow-lg rounded-2xl">

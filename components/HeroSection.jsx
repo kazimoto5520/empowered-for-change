@@ -5,21 +5,21 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div className="flex justify-between items-center mx-32">
-      <div className="flex flex-col gap-y-4">
+    <div className="max-sm:flx max-sm:flex-col max-sm:space-y-0 lg:flex justify-between items-center mx-32 max-sm:mx-4 max-lg:mx-8">
+      <div className="flex flex-col gap-y-4 p-4">
         {/* Heading */}
         <div>
-          <h1 className="text-5xl text-mainColor font-bold">
-            Girls and Women <br /> Empowerment
+          <h1 className="text-5xl text-mainColor font-bold max-sm:text-4xl">
+            Girls and Women <br className="max-sm:hidden inline-flex"/> Empowerment
           </h1>
         </div>
 
         {/* Page Description */}
-        <div className="text-textColor mt-4">
+        <div className="flex flex-wrap text-textColor mt-4">
           <p>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum
-            sit rem <br /> voluptate perferendis impedit magni, quidem repellat,
-            obcaecati <br /> unde tempore amet provident fuga repudiandae, eius
+            sit rem voluptate perferendis impedit magni, quidem repellat,
+            obcaecati unde tempore amet provident fuga repudiandae, eius
             ipsum.
           </p>
         </div>
@@ -37,13 +37,13 @@ const HeroSection = () => {
         </div>
       </div>
       <div className="relative">
-        <div className="bg-mainColor w-[350px] h-[350px] rounded-3xl shadow-md opacity-70"></div>
+        <div className="max-lg:hidden bg-mainColor w-[350px] h-[350px] rounded-3xl shadow-md opacity-70"></div>
         <Image
           src="/hero.png"
           width={1000}
           height={1000}
           alt="Hero"
-          className="absolute top-0 right-0 object-fit"
+          className="max-lg:hidden absolute top-0 right-0 object-fit"
         />
       </div>
     </div>

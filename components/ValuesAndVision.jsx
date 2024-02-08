@@ -5,31 +5,29 @@ import { Button } from "./ui/button";
 
 const ValuesAndVision = () => {
   return (
-    <div className="mt-16 mx-32">
+    <div className="mt-16 mx-32 max-sm:mx-4 max-lg:mx-8">
       {/* Image */}
-      <div className="flex justify-between items-center">
-        <div className="" style={{ width: "500px", height: "500px" }}>
+      <div className="flex justify-between items-center space-x-8 px-2 py-2 max-sm:space-x-0">
+        <div className="max-lg:hidden max-sm:hidden" style={{ width: "500px", height: "500px" }}>
           <Image
             src="/women.png"
             width={500}
             height={500}
             alt="Women"
-            className="w-full h-full object-cover rounded-3xl"
+            className="max-lg:hidden max-sm:hidden w-full h-full object-cover rounded-3xl"
           />
         </div>
         {/* Another section starts here */}
-        <div className="text-textColor col-span-2">
+        <div className="text-textColor">
           <div className="flex flex-col">
             <div className="flex flex-col">
-              <h1 className="text-4xl font-bold">
-                Tanzania non- <br />
+              <h1 className="text-4xl font-bold max-sm:text-3xl">
+                Tanzania non- <br className="max-sm:hidden inline-flex"/>
                 governmental organization
               </h1>
               <p className="mt-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus{" "}
-                <br />
-                dignissimos deserunt, veniam, expedita autem fugit perspiciatis{" "}
-                <br />
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                dignissimos deserunt, veniam, expedita autem fugit perspiciatis
                 ut, eum omnis esse vitae perferendis libero ab dicta!
               </p>
             </div>

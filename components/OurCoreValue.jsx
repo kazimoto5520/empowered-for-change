@@ -31,18 +31,18 @@ const OurCoreValue = () => {
   ];
 
   return (
-    <div className="mt-16 mx-32" id="">
-      <div className="flex flex-col">
+    <div className="mt-16 mx-32 max-sm:mx-4 max-lg:mx-8" id="">
+      <div className="flex flex-col max-sm:py-4">
         {/* Heading :: Our Core Value */}
         <div className="flex flex-col items-center justify-center text-textColor">
-          <h1 className="font-bold text-5xl">Our Core Values</h1>
+          <h1 className="font-bold text-5xl max-sm:text-3xl">Our Core Values</h1>
           <p className="text-center mt-6">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
             quis fuga id cupiditate ullam veritatis voluptate voluptatibus.
             Ipsam facilis possimus modi, architecto quos commodi velit.
           </p>
         </div>
-        <div className="flex justify-between items-center space-x-8 mt-16">
+        <div className="flex justify-between items-center space-x-8 mt-16 max-sm:mt-8 max-sm:flex max-sm:flex-col max-sm:space-y-8 max-sm:items-center">
           {cards.map((card) => (
             <div key={card.id} className="bg-cardColor rounded-2xl shadow-lg">
               <div className="flex flex-col py-4 px-6">

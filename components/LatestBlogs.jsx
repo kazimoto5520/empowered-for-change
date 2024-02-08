@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import {Button} from "./ui/button";
 import {
@@ -6,12 +8,30 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
+    CarouselApi
 } from "./ui/carousel";
 import Image from "next/image";
 import {FaCalendar} from "react-icons/fa6";
 import Link from "next/link";
 
 const LatestBlogs = () => {
+
+    const [api, setApi] = React.useState(CarouselApi);
+    const [current, setCurrent] = React.useState(0)
+    const [count, setCount] = React.useState(0)
+
+    React.useEffect(() => {
+        if (!api) {
+            return
+        }
+
+        setCount(api.scrollSnapList().length)
+        setCurrent(api.selectedScrollSnap() + 1)
+
+        api.on("select", () => {
+            setCurrent(api.selectedScrollSnap() + 1)
+        })
+    }, [api])
 
     // Dump data for Blogs
 
@@ -46,11 +66,11 @@ const LatestBlogs = () => {
     ]
 
     return (
-        <div className="mt-16 mx-32" id="blog">
+        <div className="mt-16 mx-32 max-sm:mx-4 max-lg:mx-8" id="blog">
             <div className="flex flex-col">
                 {/* Heading :: Latest Blogs & Insights */}
                 <div className="flex justify-between items-center">
-                    <h1 className="text-textColor font-bold text-4xl">
+                    <h1 className="text-textColor font-bold text-4xl max-sm:p-1 max-sm:text-3xl">
                         Latest Blogs & Insights
                     </h1>
                     <Button
@@ -71,7 +91,7 @@ const LatestBlogs = () => {
 
                 {/* Carousel */}
                 <div className="mt-8 w-full text-textColor">
-                    <Carousel className="w-full" opts={{
+                    <Carousel setApi={setApi} className="w-full" opts={{
                         align: "start",
                         loop: true
                     }}>
@@ -81,13 +101,13 @@ const LatestBlogs = () => {
                                     <div className="border border-gray-300 shadow-lg rounded-2xl hover:cursor-grabbing">
                                         <div className="flex flex-col">
                                             <div className="aspect-w-16 aspect-h-9">
-                                            <Image
-                                                src={blog.image}
-                                                width={500}
-                                                height={500}
-                                                alt="card"
-                                                className="w-full h-full object-center rounded-tl-2xl rounded-tr-2xl"
-                                            />
+                                                <Image
+                                                    src={blog.image}
+                                                    width={500}
+                                                    height={500}
+                                                    alt="card"
+                                                    className="w-full h-full object-center rounded-tl-2xl rounded-tr-2xl"
+                                                />
                                             </div>
                                             <div className="flex flex-col px-4 py-2">
                                                 <h1 className="font-semibold text-xl">
@@ -109,8 +129,11 @@ const LatestBlogs = () => {
                                 </CarouselItem>
                             ))}
                         </CarouselContent>
-                        <CarouselPrevious/>
-                        <CarouselNext/>
+                        <CarouselPrevious className="max-sm:hidden"/>
+                        <CarouselNext className="max-sm:hidden"/>
+                        <div className="py-2 text-center text-sm text-muted-foreground font-medium">
+                            Slide {current} of {count}
+                        </div>
                     </Carousel>
                 </div>
             </div>

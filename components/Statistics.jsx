@@ -4,24 +4,24 @@ import {MdOutlinePhone} from "react-icons/md";
 
 const Statistics = () => {
     return (
-        <div className="mt-16 background-statistics">
-            <div className="relative p-12 mx-20 flex flex-col">
+        <div className="mt-16 background-statistics max-sm:mt-4 max-lg:mt-8">
+            <div className="relative p-12 mx-20 flex flex-col max-sm:mx-4 max-lg:mx-8 max-sm:p-4 max-lg:p-8">
                 <div className="flex justify-between items-center my-12">
                     <div className="flex flex-col">
                         {/* Heading and Paragraph */}
-                        <h1 className="text-white text-4xl font-bold leading-10">We expect to work <br/>with various
+                        <h1 className="text-white text-4xl font-bold max-sm:text-3xl">We expect to work <br className="max-sm:hidden inline-flex"/>with various
                             partners</h1>
-                        <p className="text-white text-sm my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        <p className="text-white my-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Aliquam blanditiis consequatur
-                            dolorem <br/> fugit illo iste mollitia quis, quod rem ullam?</p>
+                            dolorem fugit illo iste mollitia quis, quod rem ullam?</p>
 
                         {/* Card and Picture */}
-                        <div className="w-fit grid grid-cols-2 gap-2 bg-white rounded-2xl shadow-md items-center mt-8">
+                        <div className="w-fit grid grid-cols-2 gap-2 bg-white rounded-2xl shadow-md items-center mt-8 max-sm:mt-2 max-sm:gap-1">
                             <div className="">
                                 <Image src="/women3.jpg" width={200} height={200} alt="cover"
                                        className="rounded-tl-2xl rounded-bl-2xl object-cover"/>
                             </div>
-                            <div className="col-span-1 text-sm text-textColor px-3 py-2">
+                            <div className="col-span-1 text-sm text-textColor px-3 py-2 max-sm:text-xs max-sm:px-6">
                                 <ul className="list-disc">
                                     <li>The Best Plan For Business</li>
                                     <li>Make Your Business Improve</li>
@@ -44,14 +44,14 @@ const Statistics = () => {
                                 <MdOutlinePhone size={32} className="rounded-full text-white p-1 border border-white"/>
                                 <div className="text-white">
                                     <p className="text-sm">24/7 Support Team</p>
-                                    <h1 className="font-semibold text-lg">+255 710 704 877</h1>
+                                    <h1 className="font-semibold text-lg max-sm:text-sm">+255 710 704 877</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     {/*   Right Hand Side :: Image */}
-                    <div className="relative rounded-2xl">
+                    <div className="relative rounded-2xl max-sm:hidden">
                         <Image src="/women3.jpg" width={500} height={500} alt="Right Hand Picture"
                                className="rounded-2xl object-cover"/>
 
@@ -80,12 +80,12 @@ const Statistics = () => {
 
                 {/*    TODO: Bar*/}
                 <div className="w-full absolute bottom-0 left-0 translate-y-1/2">
-                    <div className="bg-white shadow-md rounded-3xl px-8 py-4">
-                        <div className="flex justify-between items-center px-4">
+                    <div className="bg-white shadow-md rounded-3xl px-8 py-4 max-sm:py-2">
+                        <div className="flex justify-between items-center px-4 max-sm:px-2">
                             <div className="flex items-center space-x-2">
                                 <div className="flex flex-col items-center justify-center">
-                                    <h1 className="text-mainColor text-4xl font-bold my-2">22K+</h1>
-                                    <p className="text-textColor font-medium">Project Completed</p>
+                                    <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">22K+</h1>
+                                    <p className="text-textColor font-medium max-sm:text-sm max-sm:text-center">Project Completed</p>
                                 </div>
                                 <div
                                     className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90"></div>
@@ -93,26 +93,26 @@ const Statistics = () => {
 
                             <div className="flex items-center space-x-2">
                                 <div className="flex flex-col items-center justify-center">
-                                    <h1 className="text-mainColor text-4xl font-bold my-2">50K+</h1>
-                                    <p className="text-textColor font-medium">Happy Customer</p>
+                                    <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">50K+</h1>
+                                    <p className="text-textColor font-medium max-sm:text-sm max-sm:text-center">Happy Customer</p>
+                                </div>
+                                <div
+                                    className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90 max-sm:hidden"></div>
+                            </div>
+
+                            <div className="flex items-center space-x-2 max-sm:hidden">
+                                <div className="flex flex-col items-center justify-center">
+                                    <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">15+</h1>
+                                    <p className="text-textColor font-medium max-sm:text-sm">Award Achieved</p>
                                 </div>
                                 <div
                                     className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90"></div>
                             </div>
 
-                            <div className="flex items-center space-x-2">
+                            <div className="flex items-center space-x-2 max-sm:hidden">
                                 <div className="flex flex-col items-center justify-center">
-                                    <h1 className="text-mainColor text-4xl font-bold my-2">15+</h1>
-                                    <p className="text-textColor font-medium">Award Achieved</p>
-                                </div>
-                                <div
-                                    className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90"></div>
-                            </div>
-
-                            <div className="flex items-center space-x-2">
-                                <div className="flex flex-col items-center justify-center">
-                                    <h1 className="text-mainColor text-4xl font-bold my-2">80+</h1>
-                                    <p className="text-textColor font-medium">Office Branches</p>
+                                    <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">80+</h1>
+                                    <p className="text-textColor font-medium max-sm:text-sm">Office Branches</p>
                                 </div>
                             </div>
                         </div>

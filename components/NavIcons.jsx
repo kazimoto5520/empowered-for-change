@@ -8,7 +8,7 @@ import {
     FaSquareXTwitter,
     FaLocationDot,
     FaMagnifyingGlass,
-    FaMobileButton,
+    FaMobileButton, FaBars, FaSquareInstagram, FaCircleXmark,
 } from "react-icons/fa6";
 import Link from "next/link";
 import {Input} from "./ui/input";
@@ -17,6 +17,13 @@ const NavIcons = () => {
     // Handle the click button
     const [clicked, setClicked] = useState(false);
     const [header, setHeader] = useState(false);
+
+    const [isOpen, setIsOpen] = useState(false);
+
+    const toggleModal = () => {
+        setIsOpen(!isOpen);
+    };
+
 
     useEffect(() => {
         const scrollYPos = window.addEventListener("scroll", () => {
@@ -51,35 +58,40 @@ const NavIcons = () => {
     ];
 
     return (
-        <header className={`${header ? "py-4 bg-white shadow-lg" : "py-6"} sticky top-0 z-30 transition-all`}>
+        <header
+            className={`${header ? "py-2 bg-white shadow-lg" : "py-1"} sticky top-0 z-30 transition-all max-sm:mt-0`}>
 
-            <div className="px-4 py-2 text-mainColor mx-32">
+            <div className="px-4 py-2 text-mainColor mx-32 max-sm:mx-2 max-lg:mx-8">
                 <div className="flex flex-col">
-                    <div className="flex flex-col lg:flex-row justify-between items-center lg:items-start">
+                    <div
+                        className="flex lg:flex-row justify-between items-center lg:items-start mx-12 max-sm:mx-4 max-lg:mx-8 max-sm:hidden">
                         {/* Company Email and Location */}
-                        <div className="flex flex-col lg:flex-row lg:gap-y-2 justify-center items-center gap-x-8">
+                        <div className="flex flex-col lg:flex-row justify-center items-center gap-x-8">
                             <div className="flex justify-center items-center gap-2">
                                 <FaEnvelope size={16}/>
-                                <span className="text-sm">Company@domain.com</span>
+                                <span className="text-xs">Company@domain.com</span>
                             </div>
-                            <div className="flex justify-center items-center gap-x-2">
+                            <div className="hidden lg:flex justify-center items-center gap-x-2">
                                 <FaLocationDot size={16}/>
-                                <span className="text-sm">
+                                <span className="text-xs">
                 JI. Raya Puputan No 142, TZ - 80234
               </span>
                             </div>
                         </div>
 
                         {/* Social Media and Search Icons */}
-                        <div className="flex justify-center lg:justify-end items-center gap-x-4 mt-4 lg:mt-0">
-                            <Link href="#">
+                        <div className="flex justify-center items-center gap-x-4 mt-4 lg:mt-0">
+                            <Link href="#" className="hidden lg:flex">
                                 <FaSquareFacebook size={16}/>
                             </Link>
-                            <Link href="#">
+                            <Link href="#" className="hidden lg:flex">
                                 <FaSquareXTwitter size={16}/>
                             </Link>
-                            <Link href="#">
+                            <Link href="#" className="hidden lg:flex">
                                 <FaLinkedin size={16}/>
+                            </Link>
+                            <Link href="#" className="hidden lg:flex">
+                                <FaSquareInstagram size={16}/>
                             </Link>
                             <FaMagnifyingGlass
                                 onClick={() => setClicked(!clicked)}
@@ -101,22 +113,22 @@ const NavIcons = () => {
                     )}
 
                     {/* Navbar starts here */}
-                    <div className="bg-white shadow-md rounded-full px-8 py-4 mt-6">
+                    <div className="bg-white shadow-md rounded-full px-8 py-4 mt-6 max-sm:mt-2 max-lg:mt-2">
                         <div className="flex justify-between items-center">
                             <div>
-                                <h1 className="text-lg font-bold">
+                                <h1 className="text-lg font-bold max-sm:text-sm">
                                     EMPOWERED <br/>
                                     FOR CHANGE
                                 </h1>
                             </div>
-                            <div className="flex items-center gap-x-4 font-bold text-textColor">
+                            <div className="hidden lg:flex items-center gap-x-4 font-bold text-textColor">
                                 {navLinks.map((item) => (
                                     <Link key={item.name} href={item.href}>
                                         {item.name}
                                     </Link>
                                 ))}
                             </div>
-                            <div className="flex items-center gap-x-2">
+                            <div className="hidden lg:flex items-center gap-x-2">
                                 <div className="bg-mainColor rounded-full p-2">
                                     <FaMobileButton size={16} className="text-white"/>
                                 </div>
@@ -125,6 +137,63 @@ const NavIcons = () => {
                                     <h1>+255-710-704-877</h1>
                                 </div>
                             </div>
+
+                            <div className="flex lg:hidden 2xl:hidden">
+                                <FaBars size={20} className="hover:cursor-pointer" onClick={() => {
+                                    toggleModal(), setClicked(false)
+                                }}/>
+                            </div>
+
+                            {/* Navbar in Mobile View */}
+                            {isOpen && (
+                                <div
+                                    className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
+                                    <div
+                                        className="absolute right-0 top-0 max-sm:w-3/4 w-1/2 h-full bg-white p-8 shadow-md  transition-transform transform translate-x-full duration-300 max-sm:translate-x-0 max-lg:translate-x-0">
+                                        <div className="flex justify-between items-center p-2">
+                                            <h1 className="font-bold text-xl uppercase max-sm:text-sm">Empowered <br/>For Change</h1>
+                                            <FaCircleXmark size={20} onClick={toggleModal}/>
+                                        </div>
+
+                                        <div className="p-2">
+                                            <ul className="space-y-4 text-center">
+                                                {navLinks.map((item) => (
+                                                    <Link key={item.name} href={item.href} onClick={toggleModal}>
+                                                        <li>
+                                                            {item.name}
+                                                        </li>
+                                                    </Link>
+                                                ))}
+                                                {/* Add more nav links as needed */}
+                                            </ul>
+                                        </div>
+
+                                        <div className="mt-4">
+                                            <div className="flex justify-center items-center gap-x-4 mt-4 lg:mt-0">
+                                                <Link href="#" className="lg:flex">
+                                                    <FaSquareFacebook size={20}/>
+                                                </Link>
+                                                <Link href="https://twitter.com/mdk_tz" target="_blank" rel="noopener noreferrer" className="lg:flex">
+                                                    <FaSquareXTwitter size={20}/>
+                                                </Link>
+                                                <Link href="#" className="lg:flex">
+                                                    <FaLinkedin size={20}/>
+                                                </Link>
+                                                <Link href="#" className="lg:flex">
+                                                    <FaSquareInstagram size={20}/>
+                                                </Link>
+                                                <FaMagnifyingGlass
+                                                    onClick={() => {
+                                                        setIsOpen(false), setClicked(!clicked)
+                                                    }}
+                                                    size={20}
+                                                    className="hover:cursor-pointer"
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>

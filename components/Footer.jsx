@@ -25,7 +25,7 @@ const Footer = () => {
         },
 
         {
-            source: "/sponsor.png",
+            source: "/sponsor2.png",
             alt: "sponsor2"
         },
 
@@ -35,18 +35,18 @@ const Footer = () => {
         },
 
         {
-            source: "/sponsor.png",
+            source: "/sponsor2.png",
             alt: "sponsor3"
         }
 
     ]
 
     return (
-        <div className="mt-16">
+        <div className="mt-16 ">
             <div className="flex flex-col">
                 <div className="bg-[#f0832e]">
                     <div
-                        className="grid grid-cols-4 mx-20 p-4 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        className="grid grid-cols-4 mx-20 p-4 max-sm:mx-4 max-lg:mx-8">
                         {images.map(img => (
                             <Image src={img.source} width={200} height={200} alt={img.alt}
                                    className="rounded-full object-cover"/>))}
@@ -55,9 +55,9 @@ const Footer = () => {
 
                 <div className="bg-[#f9cdab]">
                     <div
-                        className="mt-16 grid grid-cols-4 gap-4 mx-20 p-4 xs:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        className="mt-16 grid grid-cols-4 gap-4 mx-20 p-4 max-sm:grid-cols-1 max-lg:grid-cols-2 max-sm:gap-y-8 max-sm:mx-4 max-lg:mx-8">
                         <div className="flex flex-col">
-                            <h1 className="uppercase text-white text-2xl font-bold">Empowered <br/>For Change</h1>
+                            <h1 className="uppercase text-white text-2xl font-bold max-sm:text-xl">Empowered <br/>For Change</h1>
                             <p className="text-sm text-textColor my-2">Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Accusamus consequatur excepturi harum in numquam sed!</p>
                             <div className="flex flex-col space-y-2 mt-4">
@@ -79,7 +79,7 @@ const Footer = () => {
                         </div>
 
                         <div className="flex flex-col">
-                            <h1 className="text-white text-2xl font-bold">Our Services</h1>
+                            <h1 className="text-white text-2xl font-bold max-sm:text-xl">Our Services</h1>
 
                             <div className="flex flex-col my-2 space-y-2">
                                 <div className="flex items-center space-x-2">
@@ -106,7 +106,7 @@ const Footer = () => {
                         </div>
 
                         <div className="flex flex-col">
-                            <h1 className="text-white text-2xl font-bold">Advantage <br/> Social Links</h1>
+                            <h1 className="text-white text-2xl font-bold max-sm:text-xl">Advantage <br/> Social Links</h1>
                             <p className="text-sm text-textColor my-2">Lorem ipsum dolor sit amet, consectetur
                                 adipisicing elit. Accusamus consequatur excepturi harum in numquam sed!</p>
 
@@ -143,7 +143,7 @@ const Footer = () => {
                         </div>
 
                         <div className="flex flex-col">
-                            <h1 className="text-white text-2xl font-bold">Where To <br/> Find Us</h1>
+                            <h1 className="text-white text-2xl font-bold max-sm:text-xl">Where To <br/> Find Us</h1>
                             <Link href="/" className="text-sm text-textColor my-2">Search Our Location</Link>
                             <Link href="/" className="text-sm text-textColor">Find Nearest One</Link>
 
@@ -167,7 +167,7 @@ const Footer = () => {
                         <Separator className="bg-white"/>
                     </div>
 
-                    <div className="mx-12 px-8 py-4 flex justify-between items-center">
+                    <div className="mx-12 px-8 py-4 flex justify-between items-center max-sm:flex max-sm:flex-col-reverse max-sm:gap-y-4 max-sm:mx-0">
                         <div className="text-textColor text-sm">
                             <h1>Copyright &copy; 2024 Bizcorpo. All right reserved. </h1>
                         </div>
