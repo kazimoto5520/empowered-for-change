@@ -38,7 +38,7 @@ const LatestBlogs = () => {
       title: "Creating Daily Business for Women",
       date: "December 20, 2023",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, optio. Lorem ipsum dolor sit amet.",
+        "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, optio. Lorem ipsum dolor sit amet. jghhgf uutuy 7t76t7 igjhghgh 7t7t7t76 iyiuyiyiy",
       image: "/women.png",
     },
 
@@ -100,41 +100,40 @@ const LatestBlogs = () => {
               loop: true,
             }}
           >
-            <CarouselContent className="max-sm:py-2 max-sm:px-6 max-lg:py-2 max-lg:px-8">
+            <CarouselContent className="max-sm:py-2 max-sm:px-6 max-lg:py-2 max-lg:px-8 gap-4 px-8 py-6">
               {blogs.map((blog) => (
                 <CarouselItem
                   key={blog.title}
-                  className="md:basis-1/2 lg:basis-1/3 px-4 py-2 max-sm:py-2 max-sm:px-4"
+                  className="grid gap-4 md:basis-1/2 lg:basis-1/3 max-sm:py-2 max-sm:px-4 border border-gray-300 shadow-md rounded-2xl hover:cursor-pointer"
                 >
-                  <div className="border border-gray-300 shadow-md rounded-2xl hover:cursor-grabbing">
-                    <div className="flex flex-col">
-                        <div className="flex justify-center items-center" style={{width: "400px"}, {height: "400px"}}>
-                          <Image
-                            src={blog.image}
-                            width={500}
-                            height={500}
-                            alt="card"
-                            className="w-full h-full object-cover rounded-tl-2xl rounded-tr-2xl"
-                          />
-                        </div>
-                
-                      <div className="flex flex-col px-4 py-2">
-                        <h1 className="font-semibold text-xl">{blog.title}</h1>
-                        <div className="flex items-center space-x-4 mt-4">
-                          <FaCalendar size={16} />
-                          <p className="text-sm text-gray-400">{blog.date}</p>
-                        </div>
+                  <div className="relative overflow-hidden bg-cover bg-no-repeat -ml-4">
+                    <Image
+                      src={blog.image}
+                      width={500}
+                      height={500}
+                      alt="card"
+                      className="w-full h-full object-cover rounded-t-2xl"
+                    />
+                    <Link href="#!">
+                      <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
+                    </Link>
+                  </div>
 
-                        <div className="mt-2">
-                          <p className="text-sm">{blog.description}</p>
-                          <Link
-                            href="#"
-                            className="text-mainColor text-sm mt-2"
-                          >
-                            Learn more...
-                          </Link>
-                        </div>
-                      </div>
+                  <div className="p-6">
+                    <div>
+                      <h1 className="font-semibold text-xl">{blog.title}</h1>
+                    </div>
+
+                    <div className="flex items-center space-x-4 mt-4">
+                      <FaCalendar size={16} />
+                      <p className="text-sm text-gray-400">{blog.date}</p>
+                    </div>
+                    <div className="mt-2">
+                      <p className="text-sm">{blog.description.length < 100 ? blog.description : blog.description.substring(0, 100) + "..."}</p>
+
+                      <Link href="#" className="text-mainColor text-sm mt-4">
+                        Learn more
+                      </Link>
                     </div>
                   </div>
                 </CarouselItem>
