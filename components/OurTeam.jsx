@@ -18,7 +18,7 @@ const OurTeam = () => {
         {
             name: "Meshack Kazimoto",
             position: "Developer",
-            image: "/women.png",
+            image: "/women1.jpg",
             facebook: "/",
             twitter: "/",
             phone: "#"
