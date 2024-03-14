@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import {
@@ -9,6 +11,9 @@ import {
 } from "react-icons/fa6";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
+import AOS from "aos";
+import {useEffect} from "react";
+import "aos/dist/aos.css";
 
 const OurTeam = () => {
   const members = [
@@ -46,6 +51,12 @@ const OurTeam = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      disable: "mobile",
+    });
+  }, []);
+
   return (
     <div className="mt-16 mx-32 max-sm:mx-4 max-lg:mx-8" id="contact">
       <div className="flex flex-col">
@@ -71,10 +82,10 @@ const OurTeam = () => {
 
         {/* Carousel */}
         <div className="mt-16 w-full text-textColor">
-          <div className="grid grid-cols-4 gap-4 max-sm:grid-cols-1 max-lg:lg:grid-cols-2">
+          <div className="grid grid-cols-3 gap-8 max-sm:grid-cols-1 max-lg:grid-cols-2" data-aos="fade-up">
             {members.map((member) => (
               <div key={member.name} className="grid gap-4">
-                <div className="border border-gray-300 shadow-lg rounded-2xl">
+                <div className="border border-gray-300 shadow-md rounded-2xl">
                   <div className="flex flex-col">
                     <div className="aspect-w-16 aspect-h-9">
                       <Image

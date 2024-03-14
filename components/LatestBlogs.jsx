@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, {useEffect} from "react";
 import { Button } from "./ui/button";
 import {
   Carousel,
@@ -12,6 +12,8 @@ import {
 import Image from "next/image";
 import { FaCalendar } from "react-icons/fa6";
 import Link from "next/link";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const LatestBlogs = () => {
   const [api, setApi] = React.useState();
@@ -67,6 +69,12 @@ const LatestBlogs = () => {
     },
   ];
 
+  useEffect(() => {
+    AOS.init({
+      disable: "mobile",
+    });
+  }, []);
+
   return (
     <div className="mt-16 mx-32 max-sm:mx-4 max-lg:mx-8" id="blog">
       <div className="flex flex-col">
@@ -91,7 +99,7 @@ const LatestBlogs = () => {
         </div>
 
         {/* Carousel */}
-        <div className="mt-8 max-lg:mt-4 w-full text-textColor">
+        <div className="mt-8 max-lg:mt-4 w-full text-textColor" data-aos="fade-up">
           <Carousel
             setApi={setApi}
             className="w-full"
@@ -106,7 +114,7 @@ const LatestBlogs = () => {
                   key={blog.title}
                   className="grid gap-4 md:basis-1/2 lg:basis-1/3 max-sm:py-2 max-sm:px-4 border border-gray-300 shadow-md rounded-2xl hover:cursor-pointer"
                 >
-                  <div className="relative overflow-hidden bg-cover bg-no-repeat -ml-4">
+                  <div className="relative overflow-hidden bg-cover bg-no-repeat -ml-4 max-sm:-mr-4 max-sm:-mt-4">
                     <Image
                       src={blog.image}
                       width={500}
@@ -114,7 +122,7 @@ const LatestBlogs = () => {
                       alt="card"
                       className="w-full h-full object-cover rounded-t-2xl"
                     />
-                    <Link href="#!">
+                    <Link href="#">
                       <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
                     </Link>
                   </div>
@@ -141,7 +149,7 @@ const LatestBlogs = () => {
             </CarouselContent>
             <CarouselPrevious className="max-sm:hidden max-lg:hidden" />
             <CarouselNext className="max-sm:hidden max-lg:hidden" />
-            <div className="py-2 text-center text-sm text-muted-foreground font-medium">
+            <div className="mt-4 py-2 text-center text-sm text-muted-foreground font-medium">
               Slide {current} of {count}
             </div>
           </Carousel>

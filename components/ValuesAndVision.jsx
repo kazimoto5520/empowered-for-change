@@ -1,28 +1,43 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
 import { FaCircleUser, FaHandHoldingDroplet, FaPodcast } from "react-icons/fa6";
 import { Button } from "./ui/button";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const ValuesAndVision = () => {
+  useEffect(() => {
+    AOS.init({
+      disable: "mobile",
+    });
+  }, []);
   return (
     <div className="mt-16 mx-32 max-sm:mx-4 max-lg:mx-8">
       {/* Image */}
-      <div className="flex justify-between items-center space-x-8 px-2 py-2 max-sm:space-x-0">
-        <div className="max-lg:hidden max-sm:hidden" style={{ width: "500px", height: "500px" }}>
-          <Image
-            src="/women.png"
-            width={500}
-            height={500}
-            alt="Women"
-            className="max-lg:hidden max-sm:hidden w-full h-full object-cover rounded-3xl"
-          />
+      <div className="flex justify-between items-center gap-x-8 px-2 py-2 max-sm:gap-x-0">
+        <div
+          className="max-lg:hidden max-sm:hidden max-w-[600px]"
+          data-aos="fade-right"
+        >
+          <div className="" style={{ width: "500px", height: "500px" }}>
+            <Image
+              src="/women.png"
+              width={500}
+              height={500}
+              alt="Women"
+              className="max-lg:hidden max-sm:hidden w-full h-full object-cover rounded-3xl"
+            />
+          </div>
         </div>
+
         {/* Another section starts here */}
-        <div className="text-textColor">
+        <div className="text-textColor" data-aos="fade-left">
           <div className="flex flex-col">
             <div className="flex flex-col">
               <h1 className="text-4xl font-bold max-sm:text-3xl">
-                Tanzania non- <br className="max-sm:hidden inline-flex"/>
+                Tanzania non- <br className="max-sm:hidden inline-flex" />
                 governmental organization
               </h1>
               <p className="mt-4">
