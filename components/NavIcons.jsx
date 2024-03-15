@@ -1,20 +1,11 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
-import {
-  FaEnvelope,
-  FaLinkedin,
-  FaSquareFacebook,
-  FaSquareXTwitter,
-  FaLocationDot,
-  FaMagnifyingGlass,
-  FaMobileButton,
-  FaBars,
-  FaSquareInstagram,
-  FaCircleXmark,
-} from "react-icons/fa6";
-import Link from "next/link";
+import React, { useEffect, useState } from "react";
+import { FaEnvelope, FaLocationDot, FaMobileButton } from "react-icons/fa6";
 import { Input } from "./ui/input";
+import MobileNavbar from "@/components/MobileNavbar";
+import NavItemsComponents from "@/components/NavItemsComponents";
+import Socials from "@/components/Socials";
 
 const NavIcons = () => {
   // Handle the click button
@@ -34,30 +25,6 @@ const NavIcons = () => {
 
     return () => window.removeEventListener("scroll", scrollYPos);
   });
-
-  //   Dump Data for Nav Links
-  const navLinks = [
-    {
-      name: "Home",
-      href: "#top",
-    },
-    {
-      name: "About Us",
-      href: "#about",
-    },
-    {
-      name: "Events",
-      href: "#events",
-    },
-    {
-      name: "Blog",
-      href: "#blog",
-    },
-    {
-      name: "Contact",
-      href: "#contact",
-    },
-  ];
 
   return (
     <header
@@ -83,25 +50,7 @@ const NavIcons = () => {
             </div>
 
             {/* Social Media and Search Icons */}
-            <div className="flex justify-center items-center gap-x-4 mt-4 lg:mt-0">
-              <Link href="#" className="hidden lg:flex">
-                <FaSquareFacebook size={16} />
-              </Link>
-              <Link href="#" className="hidden lg:flex">
-                <FaSquareXTwitter size={16} />
-              </Link>
-              <Link href="#" className="hidden lg:flex">
-                <FaLinkedin size={16} />
-              </Link>
-              <Link href="#" className="hidden lg:flex">
-                <FaSquareInstagram size={16} />
-              </Link>
-              <FaMagnifyingGlass
-                onClick={() => setClicked(!clicked)}
-                size={16}
-                className="hover:cursor-pointer"
-              />
-            </div>
+            <Socials />
           </div>
 
           {/* Hidden Search Bar for searching items */}
@@ -124,13 +73,9 @@ const NavIcons = () => {
                   FOR CHANGE
                 </h1>
               </div>
-              <div className="hidden lg:flex items-center gap-x-4 font-bold text-textColor">
-                {navLinks.map((item) => (
-                  <Link key={item.name} href={item.href}>
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
+              
+             <NavItemsComponents />
+
               <div className="hidden lg:flex items-center gap-x-2">
                 <div className="bg-mainColor rounded-full p-2">
                   <FaMobileButton size={16} className="text-white" />
@@ -142,17 +87,11 @@ const NavIcons = () => {
               </div>
 
               <div className="flex lg:hidden 2xl:hidden">
-                <FaBars
-                  size={20}
-                  className="hover:cursor-pointer"
-                  onClick={() => {
-                    toggleModal(), setClicked(false);
-                  }}
-                />
+                <MobileNavbar />
               </div>
 
               {/* Navbar in Mobile View */}
-              {isOpen && (
+              {/*{isOpen && (
                 <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
                   <div className="absolute right-0 top-0 max-sm:w-3/4 w-1/2 h-full bg-white p-8 shadow-md  transition-transform transform translate-x-full duration-300 max-sm:translate-x-0 max-lg:translate-x-0">
                     <div className="flex justify-between items-center p-2">
@@ -174,7 +113,7 @@ const NavIcons = () => {
                             <li>{item.name}</li>
                           </Link>
                         ))}
-                        {/* Add more nav links as needed */}
+                         Add more nav links as needed
                       </ul>
                     </div>
 
@@ -208,7 +147,7 @@ const NavIcons = () => {
                     </div>
                   </div>
                 </div>
-              )}
+              )}*/}
             </div>
           </div>
         </div>

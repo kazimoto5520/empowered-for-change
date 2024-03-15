@@ -99,7 +99,7 @@ const Statistics = () => {
             <div className="bg-statistics_img bg-no-repeat bg-cover bg-center absolute -top-60 -right-2 w-[300px] h-[400px] rounded-2xl">
               {/* Card :: Selection Items */}
               <div
-                className="absolute top-1/2 -right-1/3 -translate-y-1/2 w-ful max-h-full overflow-hidden flex flex-col items-center bg-white rounded-2xl shadow-md max-lg:-right-12"
+                className="absolute top-1/4 -right-1/3 -translate-y-1/2 w-ful max-h-full overflow-hidden flex flex-col items-center bg-white rounded-2xl shadow-md max-lg:-right-12"
                 data-aos="fade-up"
               >
                 <div className="w-full text-textColor px-2 py-4 hover:bg-[#f9cdab] hover:duration-300 hover:cursor-pointer">
@@ -135,8 +135,8 @@ const Statistics = () => {
 
         {/*    TODO: Bar*/}
         <div className="w-full absolute bottom-0 left-0 translate-y-1/2">
-          <div className="bg-white shadow-md rounded-3xl px-8 py-4 max-sm:py-2">
-            <div className="flex justify-between items-center px-4 max-sm:px-2">
+          <div className="bg-white shadow-md rounded-3xl px-8 py-8 max-sm:py-2">
+            <div className="flex items-center gap-x-20 px-4 max-sm:px-2 max-sm:gap-x-8">
               <div className="flex items-center space-x-2">
                 <div className="flex flex-col items-center justify-center">
                   <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">
@@ -148,8 +148,8 @@ const Statistics = () => {
                     Project Completed
                   </p>
                 </div>
-                <div className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90"></div>
               </div>
+              <div className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90"></div>
 
               <div className="flex items-center space-x-2">
                 <div className="flex flex-col items-center justify-center">
@@ -162,8 +162,8 @@ const Statistics = () => {
                     Happy Customer
                   </p>
                 </div>
-                <div className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90 max-sm:hidden"></div>
               </div>
+              <div className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90 max-sm:hidden"></div>
 
               <div className="flex items-center space-x-2 max-sm:hidden">
                 <div className="flex flex-col items-center justify-center">
@@ -175,8 +175,8 @@ const Statistics = () => {
                     Award Achieved
                   </p>
                 </div>
-                <div className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90"></div>
               </div>
+              <div className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90 max-sm:hidden"></div>
 
               <div className="flex items-center space-x-2 max-sm:hidden">
                 <div className="flex flex-col items-center justify-center">
