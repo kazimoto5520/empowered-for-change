@@ -81,7 +81,7 @@ const OurTeam = () => {
         {/* Carousel */}
         <div className="mt-16 w-full text-textColor">
           <div
-            className="grid grid-cols-3 gap-8 max-sm:grid-cols-1 max-lg:grid-cols-2"
+            className="grid grid-cols-4 gap-8 max-sm:grid-cols-1 max-lg:grid-cols-2"
             data-aos="fade-up"
           >
             {members.map((member) => (
