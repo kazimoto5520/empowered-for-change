@@ -1,29 +1,39 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { MdOutlinePhone } from "react-icons/md";
-import CountUp, {useCountUp} from "react-countup";
+import CountUp, { useCountUp } from "react-countup";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { useEffect } from "react";
 
 const Statistics = () => {
   useCountUp({
-    ref: 'counter',
+    ref: "counter",
     end: 1234567,
     enableScrollSpy: true,
     scrollSpyDelay: 1000,
   });
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
-    <div className="mt-16 background-statistics max-sm:mt-4 max-lg:mt-8" id="events">
+    <div
+      className="mt-16 mb-16 background-statistics max-sm:mt-4 max-lg:mt-8"
+      id="events"
+    >
       <div className="relative p-12 mx-20 flex flex-col max-sm:mx-4 max-lg:mx-8 max-sm:p-4 max-lg:p-8">
         <div className="flex justify-between items-center my-12">
           <div className="flex flex-col max-w-[600px]">
             {/* Heading and Paragraph */}
-            <h1 className="text-white text-4xl font-bold max-sm:text-3xl">
+            <h1 className="text-white text-4xl font-bold drop-shadow-lg shadow-black max-sm:text-3xl">
               We expect to work <br className="max-sm:hidden inline-flex" />
               with various partners
             </h1>
-            <p className="text-white my-4">
+            <p className="text-white my-4 max-w-[500px] max-lg:max-w-[300px]">
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam
               blanditiis consequatur dolorem fugit illo iste mollitia quis, quod
               rem ullam?
@@ -51,7 +61,10 @@ const Statistics = () => {
 
             {/* Hire Us Now Contact Icon */}
 
-            <div className="flex items-center space-x-6 my-4">
+            <div
+              data-aos="fade-up"
+              className="flex items-center space-x-6 my-4"
+            >
               <div>
                 <Button className="bg-mainColor text-white rounded-xl shadow-md hover:bg-textColor hover:duration-300">
                   Hire Us Now
@@ -63,7 +76,7 @@ const Statistics = () => {
                   size={32}
                   className="rounded-full text-white p-1 border border-white"
                 />
-                <div className="text-white">
+                <div className="text-white drop-shadow-lg shadow-black">
                   <p className="text-sm">24/7 Support Team</p>
                   <h1 className="font-semibold text-lg max-sm:text-sm">
                     +255 710 704 877
@@ -75,41 +88,46 @@ const Statistics = () => {
 
           {/*   Right Hand Side :: Image */}
           <div className="relative rounded-2xl max-sm:hidden">
-            <Image
+            {/*<Image
               src="/women3.jpg"
               width={500}
               height={500}
               alt="Right Hand Picture"
               className="rounded-2xl object-cover"
-            />
+            />*/}
 
-            {/* Card :: Selection Items */}
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 w-ful max-h-full overflow-hidden flex flex-col items-center bg-white rounded-2xl shadow-md max-lg:-right-12">
-              <div className="w-full text-textColor px-2 py-4 hover:bg-[#f9cdab] hover:duration-300 hover:cursor-pointer">
-                <h1 className="text-lg font-bold max-lg:text-sm">
-                  Expert Team
-                </h1>
-                <p className="text-sm max-lg:text-xs">
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </div>
+            <div className="bg-statistics_img bg-no-repeat bg-cover bg-center absolute -top-60 -right-2 w-[300px] h-[400px] rounded-2xl">
+              {/* Card :: Selection Items */}
+              <div
+                className="absolute top-1/2 -right-1/3 -translate-y-1/2 w-ful max-h-full overflow-hidden flex flex-col items-center bg-white rounded-2xl shadow-md max-lg:-right-12"
+                data-aos="fade-up"
+              >
+                <div className="w-full text-textColor px-2 py-4 hover:bg-[#f9cdab] hover:duration-300 hover:cursor-pointer">
+                  <h1 className="text-base font-bold max-lg:text-sm">
+                    Expert Team
+                  </h1>
+                  <p className="text-xs max-lg:text-xs">
+                    Lorem ipsum dolor sit amet.
+                  </p>
+                </div>
 
-              <div className="w-full text-white bg-mainColor p-2 hover:text-textColor hover:duration-300 hover:cursor-pointer">
-                <h1 className="text-lg font-bold max-lg:text-sm">
-                  Target Fulfill
-                </h1>
-                <p className="text-sm max-lg:text-xs">
-                  Lorem ipsum dolor sit amet.
-                </p>
-              </div>
+                <div className="w-full text-white bg-mainColor p-2 hover:text-textColor hover:duration-300 hover:cursor-pointer">
+                  <h1 className="text-base font-bold max-lg:text-sm">
+                    Target Fulfill
+                  </h1>
+                  <p className="text-xs max-lg:text-xs">
+                    Lorem ipsum dolor sit amet.
+                  </p>
+                </div>
 
-              <div className="w-full text-textColor p-2 hover:bg-[#f9cdab] hover:duration-300 hover:cursor-pointer">
-                <h1 className="text-lg font-bold max-lg:text-sm">
-                  Achieve Goal
-                </h1>
-                <p className="text-sm max-lg:text-xs">
-                  Lorem ipsum dolor sit amet.
-                </p>
+                <div className="w-full text-textColor p-2 hover:bg-[#f9cdab] hover:duration-300 hover:cursor-pointer">
+                  <h1 className="text-base font-bold max-lg:text-sm">
+                    Achieve Goal
+                  </h1>
+                  <p className="text-xs max-lg:text-xs">
+                    Lorem ipsum dolor sit amet.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -123,7 +141,8 @@ const Statistics = () => {
                 <div className="flex flex-col items-center justify-center">
                   <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">
                     {/*22K+*/}
-                    <CountUp start={0} end={22} enableScrollSpy={true}/>K+
+                    <CountUp start={0} end={22} enableScrollSpy={true} />
+                    K+
                   </h1>
                   <p className="text-textColor font-medium max-sm:text-sm max-sm:text-center">
                     Project Completed
@@ -136,7 +155,8 @@ const Statistics = () => {
                 <div className="flex flex-col items-center justify-center">
                   <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">
                     {/*50K+*/}
-                    <CountUp start={0} end={50} enableScrollSpy={true}/>K+
+                    <CountUp start={0} end={50} enableScrollSpy={true} />
+                    K+
                   </h1>
                   <p className="text-textColor font-medium max-sm:text-sm max-sm:text-center">
                     Happy Customer
@@ -149,7 +169,7 @@ const Statistics = () => {
                 <div className="flex flex-col items-center justify-center">
                   <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">
                     {/*15+*/}
-                    <CountUp start={0} end={15} enableScrollSpy={true}/>+
+                    <CountUp start={0} end={15} enableScrollSpy={true} />+
                   </h1>
                   <p className="text-textColor font-medium max-sm:text-sm">
                     Award Achieved
@@ -162,7 +182,8 @@ const Statistics = () => {
                 <div className="flex flex-col items-center justify-center">
                   <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">
                     {/*80+*/}
-                    <CountUp start={0} end={80} enableScrollSpy={true}/>K+
+                    <CountUp start={0} end={80} enableScrollSpy={true} />
+                    K+
                   </h1>
                   <p className="text-textColor font-medium max-sm:text-sm">
                     Office Branches

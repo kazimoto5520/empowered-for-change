@@ -9,9 +9,7 @@ import "aos/dist/aos.css";
 
 const OurCoreValue = () => {
   useEffect(() => {
-    AOS.init({
-      disable: "mobile",
-    });
+    AOS.init();
   }, []);
 
   // Dump data for Card
@@ -45,7 +43,7 @@ const OurCoreValue = () => {
       <div className="flex flex-col max-sm:py-4">
         {/* Heading :: Our Core Value */}
         <div className="flex flex-col items-center justify-center text-textColor">
-          <h1 className="font-bold text-5xl max-sm:text-3xl">
+          <h1 className="text-4xl font-bold max-sm:text-3xl">
             Our Core Values
           </h1>
           <p className="text-center mt-6">

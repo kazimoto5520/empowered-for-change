@@ -6,9 +6,9 @@ import Image from "next/image";
 const HeroSection = () => {
   return (
     <section className="py-12 xl:py-24 h-[64vh] max-lg:h-auto xl:pt-28 ">
-      <div className="mx-32">
+      <div className="mx-32 max-sm:mx-4">
         <div className="flex justify-between gap-x-8">
-          <div className="flex max-w-[600px] flex-col max-lg:items-center max-lg:text-center max-lg:w-full">
+          <div className="flex max-w-[600px] flex-col max-lg:items-center max-lg:text-center max-lg:w-full max-sm:w-full">
             {/* Heading */}
             <div>
               <h1 className="text-5xl text-mainColor font-bold max-sm:text-4xl">

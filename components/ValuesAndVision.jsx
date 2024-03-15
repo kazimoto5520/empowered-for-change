@@ -9,9 +9,7 @@ import "aos/dist/aos.css";
 
 const ValuesAndVision = () => {
   useEffect(() => {
-    AOS.init({
-      disable: "mobile",
-    });
+    AOS.init();
   }, []);
   return (
     <div className="mt-16 mx-32 max-sm:mx-4 max-lg:mx-8">

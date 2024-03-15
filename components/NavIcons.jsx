@@ -63,7 +63,7 @@ const NavIcons = () => {
     <header
       className={`${
         header ? "py-2 bg-white shadow-lg" : "py-1"
-      } sticky top-0 z-30 transition-all max-sm:mt-0`}
+      } sticky -top-1 z-30 transition-all max-sm:mt-0`}
     >
       <div className="px-4 py-2 text-mainColor mx-32 max-sm:mx-2 max-lg:mx-8">
         <div className="flex flex-col">

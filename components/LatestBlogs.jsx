@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Button } from "./ui/button";
 import {
   Carousel,
@@ -70,9 +70,7 @@ const LatestBlogs = () => {
   ];
 
   useEffect(() => {
-    AOS.init({
-      disable: "mobile",
-    });
+    AOS.init();
   }, []);
 
   return (
@@ -99,7 +97,10 @@ const LatestBlogs = () => {
         </div>
 
         {/* Carousel */}
-        <div className="mt-8 max-lg:mt-4 w-full text-textColor" data-aos="fade-up">
+        <div
+          className="mt-8 max-lg:mt-4 w-full text-textColor"
+          data-aos="fade-up"
+        >
           <Carousel
             setApi={setApi}
             className="w-full"
@@ -137,7 +138,11 @@ const LatestBlogs = () => {
                       <p className="text-sm text-gray-400">{blog.date}</p>
                     </div>
                     <div className="mt-2">
-                      <p className="text-sm">{blog.description.length < 100 ? blog.description : blog.description.substring(0, 100) + "..."}</p>
+                      <p className="text-sm">
+                        {blog.description.length < 100
+                          ? blog.description
+                          : blog.description.substring(0, 100) + "..."}
+                      </p>
 
                       <Link href="#" className="text-mainColor text-sm mt-4">
                         Learn more
