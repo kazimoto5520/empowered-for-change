@@ -135,10 +135,10 @@ const Statistics = () => {
 
         {/*    TODO: Bar*/}
         <div className="w-full absolute bottom-0 left-0 translate-y-1/2">
-          <div className="bg-white shadow-md rounded-3xl px-8 py-8 max-sm:py-2">
-            <div className="flex items-center gap-x-20 px-4 max-sm:px-2 max-sm:gap-x-8">
+          <div className="bg-white shadow-md rounded-3xl px-6 py-8 max-sm:py-4 max-lg:py-4">
+            <div className="flex items-center gap-x-20 px-4 max-sm:px-2 max-sm:gap-x-8 max-lg:gap-x-12">
               <div className="flex items-center space-x-2">
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center text-center justify-center">
                   <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">
                     {/*22K+*/}
                     <CountUp start={0} end={22} enableScrollSpy={true} />
@@ -152,7 +152,7 @@ const Statistics = () => {
               <div className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90"></div>
 
               <div className="flex items-center space-x-2">
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center text-center justify-center">
                   <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">
                     {/*50K+*/}
                     <CountUp start={0} end={50} enableScrollSpy={true} />
@@ -166,7 +166,7 @@ const Statistics = () => {
               <div className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90 max-sm:hidden"></div>
 
               <div className="flex items-center space-x-2 max-sm:hidden">
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center text-center justify-center">
                   <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">
                     {/*15+*/}
                     <CountUp start={0} end={15} enableScrollSpy={true} />+
@@ -179,7 +179,7 @@ const Statistics = () => {
               <div className="h-[0.125rem] w-16 bg-gray-300 border-t border-b border-white rotate-90 max-sm:hidden"></div>
 
               <div className="flex items-center space-x-2 max-sm:hidden">
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center text-center justify-center">
                   <h1 className="text-mainColor text-4xl font-bold my-2 max-sm:text-2xl">
                     {/*80+*/}
                     <CountUp start={0} end={80} enableScrollSpy={true} />
