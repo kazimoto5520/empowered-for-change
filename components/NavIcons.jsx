@@ -29,7 +29,7 @@ const NavIcons = () => {
   return (
     <header
       className={`${
-        header ? "py-2 bg-white shadow-lg" : "py-1"
+        header ? "py-1 bg-white shadow-lg" : "py-1"
       } sticky -top-1 z-30 transition-all max-sm:mt-0`}
     >
       <div className="px-4 py-2 text-mainColor mx-32 max-sm:mx-2 max-lg:mx-8">
@@ -50,12 +50,12 @@ const NavIcons = () => {
             </div>
 
             {/* Social Media and Search Icons */}
-            <Socials />
+            <Socials setClicked={setClicked} clicked={clicked}/>
           </div>
 
           {/* Hidden Search Bar for searching items */}
           {clicked && (
-            <div className="mt-4 p-1 duration-300">
+            <div className="mt-2 p-1 duration-300">
               <Input
                 type="text"
                 placeholder="Search"
@@ -65,7 +65,7 @@ const NavIcons = () => {
           )}
 
           {/* Navbar starts here */}
-          <div className="bg-white shadow-md rounded-full px-8 py-4 mt-6 max-sm:mt-2 max-lg:mt-2">
+          <div className="bg-white shadow-md rounded-full px-8 py-3 mt-2 max-sm:mt-2 max-lg:mt-2">
             <div className="flex justify-between items-center">
               <div>
                 <h1 className="text-lg font-bold max-sm:text-sm">

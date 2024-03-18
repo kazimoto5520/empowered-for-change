@@ -82,7 +82,7 @@ const LatestBlogs = () => {
             Latest Blogs & Insights
           </h1>
           <Button className="bg-mainColor text-white rounded-xl shadow-md hover:bg-textColor hover:duration-300">
-            More Blogs
+            <Link href="/blogs">More Blogs</Link>
           </Button>
         </div>
 

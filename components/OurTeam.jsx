@@ -56,7 +56,7 @@ const OurTeam = () => {
   }, []);
 
   return (
-    <div className="mt-16 mx-32 max-sm:mx-4 max-lg:mx-8" id="contact">
+    <div className="mt-16 mb-16 mx-32 max-sm:mx-4 max-lg:mx-8" id="contact">
       <div className="flex flex-col">
         {/* Heading :: Latest Blogs & Insights */}
         <div className="flex justify-between items-center">
@@ -64,7 +64,9 @@ const OurTeam = () => {
             Meet Our Trusted Expertise
           </h1>
           <Button className="bg-mainColor text-white rounded-xl shadow-md hover:bg-textColor hover:duration-300">
-            All Team Members
+            <Link href="/team">
+              All Team Members
+            </Link>
           </Button>
         </div>
 

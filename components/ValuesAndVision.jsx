@@ -6,6 +6,7 @@ import { FaCircleUser, FaHandHoldingDroplet, FaPodcast } from "react-icons/fa6";
 import { Button } from "./ui/button";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Link from "next/link";
 
 const ValuesAndVision = () => {
   useEffect(() => {
@@ -120,7 +121,9 @@ const ValuesAndVision = () => {
                 </div>
                 <div>
                   <Button className="bg-mainColor text-white rounded-xl shadow-md hover:bg-textColor hover:duration-300">
-                    More About Us
+                    <Link href="#footer">
+                      More About Us
+                    </Link>
                   </Button>
                 </div>
               </div>

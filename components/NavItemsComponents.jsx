@@ -7,7 +7,7 @@ const NavItemsComponents = () => {
     const navLinks = [
         {
             name: "Home",
-            href: "#top",
+            href: "/",
         },
         {
             name: "About Us",

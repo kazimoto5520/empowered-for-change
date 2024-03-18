@@ -4,6 +4,7 @@ import OurCoreValue from "@/components/OurCoreValue";
 import ValuesAndVision from "@/components/ValuesAndVision";
 import OurTeam from "@/components/OurTeam";
 import Statistics from "@/components/Statistics";
+import Sponsors from "@/components/Sponsors";
 
 export default function Home() {
     return (
@@ -15,6 +16,7 @@ export default function Home() {
                 <Statistics />
                 <LatestBlogs/>
                 <OurTeam/>
+                <Sponsors />
             </div>
         </div>
     );

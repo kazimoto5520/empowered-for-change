@@ -8,7 +8,7 @@ import {
   FaSquareXTwitter,
 } from "react-icons/fa6";
 
-const Socials = () => {
+const Socials = ({setClicked, clicked}) => {
   return (
     <div className="flex justify-center items-center gap-x-4 mt-4 lg:mt-0">
       <Link href="#" className="hidden lg:flex">
