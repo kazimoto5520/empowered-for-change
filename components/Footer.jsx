@@ -30,10 +30,19 @@ const Footer = () => {
         <div className="bg-[#f9cdab]" id="footer">
           <div className="mt-16 grid grid-cols-4 gap-4 mx-20 p-4 max-sm:grid-cols-1 max-lg:grid-cols-2 max-sm:gap-y-8 max-sm:mx-4 max-lg:mx-8">
             <div className="flex flex-col">
-              <h1 className="uppercase text-white text-2xl font-bold max-sm:text-xl">
+              {/*<h1 className="uppercase text-white text-2xl font-bold max-sm:text-xl">
                 Empowered <br />
                 For Change
-              </h1>
+              </h1>*/}
+              <div className="w-full max-w-[168px]">
+                <Image
+                  src="/assets/logo-1.png"
+                  width={500}
+                  height={500}
+                  alt="logo"
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <p className="text-sm text-textColor my-2">
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                 Accusamus consequatur excepturi harum in numquam sed!

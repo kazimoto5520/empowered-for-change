@@ -6,6 +6,7 @@ import { Input } from "./ui/input";
 import MobileNavbar from "@/components/MobileNavbar";
 import NavItemsComponents from "@/components/NavItemsComponents";
 import Socials from "@/components/Socials";
+import Image from "next/image";
 
 const NavIcons = () => {
   // Handle the click button
@@ -65,15 +66,12 @@ const NavIcons = () => {
           )}
 
           {/* Navbar starts here */}
-          <div className="bg-white shadow-md rounded-full px-8 py-3 mt-2 max-sm:mt-2 max-lg:mt-2">
+          <div className="bg-white shadow-md rounded-full px-8 py-4 mt-2 max-sm:mt-2 max-lg:mt-2">
             <div className="flex justify-between items-center">
-              <div>
-                <h1 className="text-lg font-bold max-sm:text-sm">
-                  EMPOWERED <br />
-                  FOR CHANGE
-                </h1>
+              <div className="w-full max-w-[168px]">
+                  <Image src="/assets/logo-1.png" width={500} height={500} alt="logo" className="w-full h-full object-cover"/>
               </div>
-              
+
              <NavItemsComponents />
 
               <div className="hidden lg:flex items-center gap-x-2">

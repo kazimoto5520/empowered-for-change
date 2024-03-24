@@ -8,7 +8,7 @@ import Sponsors from "@/components/Sponsors";
 
 export default function Home() {
     return (
-        <div className="mt-8">
+        <div className="">
             <div className="flex flex-col gap-y-8">
                 <HeroSection/>
                 <ValuesAndVision/>

@@ -82,7 +82,7 @@ module.exports = {
       },
       backgroundImage: {
         hero: 'url(/blob.svg)',
-        statistics_img: 'url(/women3.jpg)'
+        statistics_img: 'url(/assets/person-2.jpeg)'
       }
     },
   },

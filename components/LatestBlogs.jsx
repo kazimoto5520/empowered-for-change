@@ -41,7 +41,7 @@ const LatestBlogs = () => {
       date: "December 20, 2023",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, optio. Lorem ipsum dolor sit amet. jghhgf uutuy 7t76t7 igjhghgh 7t7t7t76 iyiuyiyiy",
-      image: "/women.png",
+      image: "/women3.jpg",
     },
 
     {
@@ -49,7 +49,7 @@ const LatestBlogs = () => {
       date: "January 12, 2024",
       description:
         "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, optio. Lorem ipsum dolor sit amet.",
-      image: "/women1.jpg",
+      image: "/assets/person-1.jpeg",
     },
 
     {
@@ -74,7 +74,7 @@ const LatestBlogs = () => {
   }, []);
 
   return (
-    <div className="mt-16 mx-32 max-sm:mx-4 max-lg:mx-8" id="blog">
+    <div className="mt-16 mx-32 mb-16 max-sm:mx-4 max-lg:mx-8" id="blog">
       <div className="flex flex-col">
         {/* Heading :: Latest Blogs & Insights */}
         <div className="flex justify-between items-center">
@@ -116,13 +116,15 @@ const LatestBlogs = () => {
                   className="grid gap-4 md:basis-1/2 lg:basis-1/3 max-sm:py-2 max-sm:px-4 border border-gray-300 shadow-md rounded-2xl hover:cursor-pointer"
                 >
                   <div className="relative overflow-hidden bg-cover bg-no-repeat -ml-4 max-sm:-mr-4 max-sm:-mt-4">
-                    <Image
-                      src={blog.image}
-                      width={500}
-                      height={500}
-                      alt="card"
-                      className="w-full h-full object-cover rounded-t-2xl"
-                    />
+                    <div className="w-full max-w-[500px] max-h-[300px] object-cover">
+                      <Image
+                        src={blog.image}
+                        width={1000}
+                        height={1000}
+                        alt="card"
+                        className="w-full h-full object-cover rounded-t-2xl"
+                      />
+                    </div>
                     <Link href="#">
                       <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
                     </Link>

@@ -22,7 +22,7 @@ const ValuesAndVision = () => {
         >
           <div className="" style={{ width: "500px", height: "500px" }}>
             <Image
-              src="/women.png"
+              src="/assets/person-4.jpeg"
               width={500}
               height={500}
               alt="Women"

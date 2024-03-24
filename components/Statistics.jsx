@@ -135,7 +135,7 @@ const Statistics = () => {
 
         {/*    TODO: Bar*/}
         <div className="w-full absolute bottom-0 left-0 translate-y-1/2">
-          <div className="bg-white shadow-md rounded-3xl px-6 py-8 max-sm:py-4 max-lg:py-4">
+          <div className="bg-white shadow-md rounded-3xl px-6 py-6 max-sm:py-4 max-lg:py-4">
             <div className="flex items-center gap-x-20 px-4 max-sm:px-2 max-sm:gap-x-8 max-lg:gap-x-12">
               <div className="flex items-center space-x-2">
                 <div className="flex flex-col items-center text-center justify-center">

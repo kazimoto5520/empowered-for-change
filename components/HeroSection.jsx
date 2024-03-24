@@ -5,8 +5,8 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="py-12 xl:py-24 h-[64vh] max-lg:h-auto xl:pt-28 ">
-      <div className="mx-32 max-sm:mx-4">
+    <section className="py-12 xl:py-24 h-[100vh] max-lg:h-auto xl:pt-28 hero-background">
+      <div className="mx-32 max-sm:mx-4 pt-24">
         <div className="flex justify-between gap-x-8">
           <div className="flex max-w-[600px] flex-col max-lg:items-center max-lg:text-center max-lg:w-full max-sm:w-full">
             {/* Heading */}
@@ -44,8 +44,8 @@ const HeroSection = () => {
           </div>
           <div className="max-lg:hidden flex relative">
             <div className="bg-hero bg-no-repeat absolute -top-36 -right-2 w-[500px] h-[500px]">
-              <div className="w-[510px] h-[462px]">
-                <Image src="/hero.png" fill={true} priority alt="" />
+              <div className="w-[462px] h-[462px]">
+                <Image src="/assets/hero-pic-1.png" width={1000} height={1000} priority alt="" className="hero-pic object-cover"/>
               </div>
             </div>
           </div>
