@@ -40,8 +40,8 @@ const OurCoreValue = () => {
   ];
 
   return (
-      <div className="background-values h-[100vh] mt-16 mb-16">
-        <div className="absolute w-full max-w-[128px] m-0" data-aos="fade-right">
+      <div className="background-values h-[100vh] mt-16 max-sm:h-auto max-lg:h-auto">
+        <div className="absolute w-full max-w-[128px] m-0 max-sm:hidden max-lg:max-w-[72px]" data-aos="fade-right">
           <Image src="/assets/top-left-lines-1.png" width={500} height={500} alt="top-left"/>
         </div>
 

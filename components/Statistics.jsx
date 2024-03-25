@@ -27,7 +27,7 @@ const Statistics = () => {
     >
       <div className="relative p-12 mx-20 flex flex-col max-sm:mx-4 max-lg:mx-8 max-sm:p-4 max-lg:p-8">
         <div className="flex justify-between items-center my-12">
-          <div className="flex flex-col max-w-[600px]">
+          <div className="flex flex-col max-w-[600px] max-lg:-ml-8">
             {/* Heading and Paragraph */}
             <h1 className="text-white text-4xl font-bold drop-shadow-lg shadow-black max-sm:text-3xl">
               We expect to work <br className="max-sm:hidden inline-flex" />
@@ -96,10 +96,10 @@ const Statistics = () => {
               className="rounded-2xl object-cover"
             />*/}
 
-            <div className="bg-statistics_img bg-no-repeat bg-cover bg-center absolute -top-60 -right-2 w-[300px] h-[400px] rounded-2xl">
+            <div className="bg-statistics_img bg-no-repeat bg-cover bg-center absolute -top-60 -right-2 w-[300px] h-[400px] rounded-2xl max-lg:w-[250px]">
               {/* Card :: Selection Items */}
               <div
-                className="absolute top-1/4 -right-1/3 -translate-y-1/2 w-ful max-h-full overflow-hidden flex flex-col items-center bg-white rounded-2xl shadow-md max-lg:-right-12"
+                className="absolute top-1/4 -right-1/3 -translate-y-1/2 w-ful max-h-full overflow-hidden flex flex-col items-center bg-white rounded-2xl shadow-md max-lg:-right-12 max-lg:w-[128px]"
                 data-aos="fade-up"
               >
                 <div className="w-full text-textColor px-2 py-4 hover:bg-[#f9cdab] hover:duration-300 hover:cursor-pointer">

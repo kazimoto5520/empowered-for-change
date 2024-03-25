@@ -34,9 +34,9 @@ const Footer = () => {
                 Empowered <br />
                 For Change
               </h1>*/}
-              <div className="w-full max-w-[168px]">
+              <div className="w-full max-w-[168px] ">
                 <Image
-                  src="/assets/logo-1.png"
+                  src="/assets/logo.png"
                   width={500}
                   height={500}
                   alt="logo"

@@ -56,7 +56,7 @@ const OurTeam = () => {
   }, []);
 
   return (
-      <div className="background-teams h-[100vh]">
+      <div className="background-teams h-[100vh] max-sm:h-auto max-lg:h-auto">
         <div className=" mt-16 mb-16 mx-32 max-sm:mx-4 max-lg:mx-8" id="contact">
       <div className="flex flex-col">
         {/* Heading :: Latest Blogs & Insights */}
