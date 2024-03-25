@@ -168,7 +168,7 @@ const Footer = () => {
               </div>
             </div>
 
-            <div className="flex flex-col">
+            <div className="background-values flex flex-col">
               <h1 className="text-white text-2xl font-bold max-sm:text-xl">
                 Where To <br /> Find Us
               </h1>

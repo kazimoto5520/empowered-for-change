@@ -48,7 +48,7 @@ const MobileNavbar = () => {
           <div>
             <div className="flex flex-col gap-y-12">
               <div className="w-full max-w-[168px]">
-                <Image src="/assets/logo-1.png" width={500} height={500} alt="logo"
+                <Image src="/assets/logo.png" width={500} height={500} alt="logo"
                        className="w-full h-full object-cover"/>
               </div>
 

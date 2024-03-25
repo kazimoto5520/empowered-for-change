@@ -45,7 +45,7 @@ const HeroSection = () => {
           <div className="max-lg:hidden flex relative">
             <div className="bg-hero bg-no-repeat absolute -top-36 -right-2 w-[500px] h-[500px]">
               <div className="w-[462px] h-[462px]">
-                <Image src="/assets/hero-pic-1.png" width={1000} height={1000} priority alt="" className="hero-pic object-cover"/>
+                <Image src="/assets/hero-pic.png" width={1000} height={1000} priority alt="" className="hero-pic object-cover"/>
               </div>
             </div>
           </div>

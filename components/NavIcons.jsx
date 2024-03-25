@@ -69,7 +69,7 @@ const NavIcons = () => {
           <div className="bg-white shadow-md rounded-full px-8 py-4 mt-2 max-sm:mt-2 max-lg:mt-2">
             <div className="flex justify-between items-center">
               <div className="w-full max-w-[168px]">
-                  <Image src="/assets/logo-1.png" width={500} height={500} alt="logo" className="w-full h-full object-cover"/>
+                  <Image src="/assets/logo.png" width={500} height={500} alt="logo" className="w-full h-full object-cover"/>
               </div>
 
              <NavItemsComponents />
